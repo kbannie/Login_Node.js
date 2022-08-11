@@ -1,4 +1,4 @@
-const mongoose=requitr('mongoose');  //mongoose 가져오기
+const mongoose=require('mongoose');  //mongoose 가져오기
 
 
 const userSchema=mongoose.Schema({
