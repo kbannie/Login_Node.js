@@ -1,6 +1,6 @@
 const express = require("express"); //express 모듈 가져오기
 const app = express(); //express를 이용하는 app 생성
-const port = 5000; //아무 숫자 가능
+
 const bodyParser = require("body-parser");
 const cookieParser = require("cookie-parser");
 const config = require("./config/key");
@@ -22,6 +22,11 @@ mongoose
   .catch((err) => console.log(err));
 
 app.get("/", (req, res) => res.send("Hello World! 안녕하세요!!!!!!!!!!!!!!"));
+
+
+app.get('/api/hello',(req,res)=>{
+  res.send("안녕하세요")
+})
 
 app.post('/api/users/register', (req, res) => {
   //회원가입 할때 필요한 정보들을 client에서 가져오면
@@ -92,4 +97,6 @@ app.get('/api/users/logout', auth, (req, res) => {
   });
 });
 
+
+const port = 5000; //아무 숫자 가능
 app.listen(port, () => console.log(`Example app listening on port ${port}`))
