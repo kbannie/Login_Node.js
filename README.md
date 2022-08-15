@@ -1,2 +1,2 @@
 # Node_login
-register, login, logout 구현 완료
+react를 활용한 register, login, logout 구현 완료
